@@ -91,6 +91,7 @@
 \renewcommand{\personalinfofont}{\small\bfseries}
 \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
+\renewcommand{\quote}{\normalsize}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -107,18 +108,17 @@
 \input{build_lang.tex}
 
 \begin{document}
-    \name{John Doe}
-    \tagline{\en{Test Developer}\sv{Testutvecklare}}
+    \name{Martin Blom}
+    \tagline{\en{Test Developer}\sv{CSE Student}}
     %% You can add multiple photos on the left or right
     \photoL{4cm}{john-doe}
     
     \personalinfo{
-        \email{john_doe@email.com}\smallskip
-        \phone{+01-2345-678901}
-        \location{\en{City, Country}\sv{Stad, Land}}\\
-        \linkedin{John Doe}{johnDoe}
-        \github{johnDoe}
-        \dev{johnDoe}
+        \email{martinblom@live.se}\smallskip
+        \phone{+46-737021018}
+        \location{\en{City, Country}\sv{Göteborg, Sverige}}\\
+        \linkedin{Martin Blom}{https://www.linkedin.com/in/martin-blom-b459a5231/}
+        \github{Marre-B}
         %\homepage{nicolasomar.me}
         %\medium{nicolasomar}
         %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
@@ -144,58 +144,36 @@
     \begin{paracol}{2}
         % ----- STRENGTHS -----
         \cvsection{\en{Strengths}\sv{Styrkor}}
-            \cvtag{One}
-            \cvtag{Two}
-            \cvtag{Three}
-            \cvtag{Four}
-            \cvtag{Five}
-            \cvtag{Six}
-            \cvtag{Seven}
-            \cvtag{Eight}
-            \cvtag{Nine}
-            \cvtag{Ten}
+            \cvtag{Problemlösning}
+            \cvtag{Stresstålig}
+            \cvtag{Självsäker}
+            \cvtag{Ansvarstagande}
+            \cvtag{Noggrann}
+
             \medskip
             
-            \cvtag{Red}
-            \cvtag{Yellow}
-            \cvtag{Blue}
-            \cvtag{Green}
-            \cvtag{Violet}
-            \cvtag{Orange}
         % ----- STRENGTHS -----
         
         % ----- CODING -----
         \cvsection{\en{Coding}\sv{Programspråk}}
-            \cvtag{Uno}
-            \cvtag{Dos}
-            \cvtag{Tres}
-            \cvtag{Cuatro}
-            \cvtag{Cinco}
-            \cvtag{Seis}
-            \cvtag{Siete}
-            \cvtag{Ocho}
-            \cvtag{Nueve}
-            \cvtag{Diez}
+            \cvtag{Haskell: Grundläggande} \\
+            \cvtag{Java: Grundläggande} \\
+            \cvtag{C: Grundläggande} \\
+		\cvtag{C++: Grundläggande}
+
             \medskip
             
-            \cvtag{Rojo}
-            \cvtag{Amarillo}
-            \cvtag{Azul}
-            \cvtag{Verde}
-            \cvtag{Violeta}
-            \cvtag{Naranja}
-            \cvtag{Marron}
-            \cvtag{Blanco}
-            \cvtag{Gris}
-            \cvtag{Negro}
         % ----- CODING -----
         
         % ----- LANGUAGES -----
         \cvsection{\en{Languages}\sv{Språk}}
-            \cvlang{\en{Lang 1}\sv{Språk 1}}{\en{Native}\sv{Modersmål}}\\
+            \cvlang{\en{Lang 1}\sv{Svenska}}{\en{Native}\sv{Modersmål}}\\
             \medskip
             
-            \cvlang{\en{Lang 2}\sv{Språk 2}}{\en{Proficient / C2}\sv{Flytande / C2}}
+            \cvlang{\en{Lang 2}\sv{Engelska}}{\en{Proficient / C2}\sv{Flytande}}
+		\medskip
+            
+            \cvlang{\en{Lang 3}\sv{Kroatiska}}{\en{Proficient / C2}\sv{Grundläggande kunskaper}}
             %% Yeah I didn't spend too much time making all the
             %% spacing consistent... sorry. Use \smallskip, \medskip,
             %% \bigskip, \vpsace etc to make ajustments.
@@ -204,13 +182,8 @@
             
         % ----- REFERENCES -----
         \cvsection{\en{References}\sv{Referenser}}
-            \linkedin{Ref 1}{ref-1}
-            \medskip
-            
-            \linkedin{Ref 2}{ref-2}
-            \medskip
-            
-            \linkedin{Ref 3}{ref-3}
+            \sv{Finns och lämnas gärna efter förfrågan.}
+
             \smallskip
         % ----- REFERENCES -----
         
@@ -252,14 +225,16 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 }
                 \sv{
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Jag är en väldigt glad, utåtgående och allmänt kunnig person. Jag har ett stort intresse i datorer, programmering och övrig teknik,
+			 jag är också intresserad av jakt och gillar fysiska utmaningar/röra på mig och vara i naturen. Jag pluggar för tillfället mitt andra år på Chalmers
+			 Tekniska Högskola, med mål att ta en master's examen inom mjukvaruutveckling eller liknande.
                 }
             \end{quote}
         % ----- ABOUT ME -----
         
         % ----- EXPERIENCE -----
         \cvsection{\en{Experience}\sv{Erfarenhet}}
-            \cvevent{\en{Charge}\sv{Befattning}}{| \en{Company}\sv{Företag}}{Mm YYYY -- Mm YYYY}{\en{City, Country}\sv{Stad, Land}}
+            \cvevent{\en{Charge}\sv{Kioskansvarig}}{| \en{Company}\sv{Flen's Golfklubb}}{Juli 2018 -- Juli 2018}{\en{City, Country}\sv{Flen, Sverige}}
             \en{
                 \begin{itemize}
                     \item First item
@@ -268,15 +243,12 @@
                 \end{itemize}
             }
             \sv{
-                \begin{itemize}
-                    \item Punkt 1
-                    \item Punkt 2
-                    \item Punkt 3
-                \end{itemize}
+                	I kiosken så jobbade jag ensam, på eget initiativ och skötte alla uppgifter som att öppna upp på morgonen, skriva ned varor som behöver köpas in, 
+			stå i kassan, vattna runt kiosken, se till att det alltid finns tillagade korvar och att stänga på kvällen.\\
             }
             \divider
             
-            \cvevent{\en{Charge}\sv{Befattning}}{| \en{Company}\sv{Företag}}{Mm YYYY -- Mm YYYY}{\en{City, Country}\sv{Stad, Land}}
+            \cvevent{\en{Charge}\sv{Produktionschef}}{| \en{Company}\sv{McDonald's}}{September 2018 -- Augusti 2020}{\en{City, Country}\sv{Katrineholm, Sverige}}
             \en{
                 \begin{itemize}
                     \item First item
@@ -285,17 +257,15 @@
                 \end{itemize}
             }
             \sv{
-                \begin{itemize}
-                    \item Punkt 1
-                    \item Punkt 2
-                    \item Punkt 3
-                \end{itemize}
+                	På McDonald’s så jobbade jag till störst del i köket och gjorde då allt som tillkom, så som att se till att det fanns upptinade ingredienser, att alla maskiner var rena och fungerande och tillaga maten. 
+			Jag är också utbildad inom alla serviceområden och stod ibland i kassan, plockade ihop beställningar och tog hand om drive-through’en. Jag har avklarad utbildning som produktionschef och 
+			för att utbilda andra nya medarbetare, och hade en påbörjad utbildning för att kunna jobba som skiftledare. \\
             }
         % ----- EXPERIENCE -----
         
         % ----- EDUCATION -----
         \cvsection{\en{Education}\sv{Utbildning}}
-            \cvevent{\en{Title}\sv{Titel}}{| Institution}{Mm YYYY -- Mm YYYY}{\en{City, Country}\sv{Stad, Land}}
+            \cvevent{\en{Title}\sv{Teknikprogrammet}}{| Gymnasieskola}{Augusti 2017 -- Juni 2020}{\en{City, Country}\sv{Eskilstuna, Sverige}}
             \en{
                 Attended \link{University}{https://university.com}
                 \smallskip
@@ -304,15 +274,30 @@
                 \end{itemize}
             }
             \sv{
-                Gick på \link{Universitet}{https://universitet.se}
+                Gick på \link{Grillska Gymnasiet}{https://grillska.se/grillska-gymnasiet-eskilstuna}
                 \smallskip
                 \begin{itemize}
-                    \item Betygssnitt: 1,23
+                    \item Betygssnitt: 19.98
                 \end{itemize}
             }
             \divider
             
-            \cvevent{\en{Title}\sv{Titel}}{| Institution}{Mm YYYY -- Mm YYYY}{\en{City, Country}\sv{Stad, Land}}
+            \cvevent{\en{Title}\sv{Data- och informationsteknik}}{| Universitet}{Augsti 2020 -- Juni 2025}{\en{City, Country}\sv{Göteborg, Sverige}}
+            \en{
+                \begin{itemize}
+                    \item GPA: 1,23
+                \end{itemize}
+            }
+            \sv{
+		 Går på \link{Chalmers Tekniska Högskola}{https://www.chalmers.se/en/Pages/default.aspx}
+		\smallskip
+                \begin{itemize}
+                    \item Betygssnitt: N/A
+                \end{itemize}
+            }
+	    \divider
+            
+            \cvevent{\en{Title}\sv{Körkort}}{}{Oktober 2019}{}
             \en{
                 \begin{itemize}
                     \item GPA: 1,23
@@ -320,12 +305,26 @@
             }
             \sv{
                 \begin{itemize}
-                    \item Betygssnitt: 1,23
+                    \item B Körkort
+                \end{itemize}
+	    }
+ 	    \divider
+            
+            \cvevent{\en{Title}\sv{Truckkort}}{| TLP10}{Februari 2022}{}
+            \en{
+                \begin{itemize}
+                    \item GPA: 1,23
                 \end{itemize}
             }
+            \sv{
+                \begin{itemize}
+                    \item A1, A2, A3, A4, B1, B2, B3, B4
+                \end{itemize}
+		}
         % ----- EDUCATION -----
         
         % ----- PROJECTS -----
+\begin{comment}
         \cvsection{\en{Projects}\sv{Projekt}}
             \cvevent{\en{Project 1}\sv{Projekt 1}}{\cvrepo{| \faGithub}{https://github.com/user/repo}\cvrepo{| \faGlobe}{https://repo-demo.com/}}{Mm YYYY -- Mm YYYY}{}
             \en{
@@ -355,6 +354,7 @@
                     \item Punkt 2
                 \end{itemize}
             }
+\end{comment}
             
         % ----- PROJECTS -----
     \end{paracol}
