@@ -101,22 +101,23 @@
 %% sample.bib contains your publications
 %% \addbibresource{sample.bib}
 
-%% [marc7s]: Multi language CV
+% Multi language CV
 % Change the language used in this file. 
 % Use `\entrue` or `\svtrue` for English/Swedish
+\entrue
 % Put in separate file for build script
-\input{build_lang.tex}
+%\input{build_lang.tex}
 
 \begin{document}
     \name{Martin Blom}
-    \tagline{\en{Test Developer}\sv{CSE Student}}
+    \tagline{\en{CSE Student}\sv{CSE Student}}
     %% You can add multiple photos on the left or right
     %%\photoL{4cm}{john-doe}
     
     \personalinfo{
         \email{martinblom@live.se}\smallskip
         \phone{+46-737021018}
-        \location{\en{City, Country}\sv{Göteborg, Sverige}}\\
+        \location{\en{Gothenburg, Sweden}\sv{Göteborg, Sverige}}\\
         \linkedin{Martin Blom}{martin-blom-b459a5231}
         \github{Marre-B}
         %\homepage{nicolasomar.me}
@@ -144,11 +145,20 @@
     \begin{paracol}{2}
         % ----- STRENGTHS -----
         \cvsection{\en{Strengths}\sv{Styrkor}}
+	\sv{
             \cvtag{Problemlösning} \\
             \cvtag{Stresstålig} \\
             \cvtag{Självsäker} \\
             \cvtag{Ansvarstagande} \\
             \cvtag{Noggrann} \\
+	}
+	\en{
+	\cvtag{Problem solving} \\
+            \cvtag{Stress resistant} \\
+            \cvtag{Confidence} \\
+            \cvtag{Responsible} \\
+            \cvtag{Meticulous} \\
+	}
 
             \medskip
             
@@ -156,11 +166,20 @@
         
         % ----- CODING -----
         \cvsection{\en{Coding}\sv{Programspråk}}
+	\sv{
             \cvtag{Haskell: Grundläggande} \\
             \cvtag{Java: Grundläggande} \\
             \cvtag{C: Grundläggande} \\
 	 \cvtag{C++: Grundläggande} \\
 	 \cvtag{C\#: Grundläggande}
+	}
+	\en{
+	 \cvtag{Haskell: Basics} \\
+            \cvtag{Java: Basics} \\
+            \cvtag{C: Basics} \\
+	 \cvtag{C++: Basics} \\
+	 \cvtag{C\#: Basics}
+	}
 
             \medskip
             
@@ -168,13 +187,13 @@
         
         % ----- LANGUAGES -----
         \cvsection{\en{Languages}\sv{Språk}}
-            \cvlang{\en{Lang 1}\sv{Svenska}}{\en{Native}\sv{Modersmål}}\\
+            \cvlang{\en{Swedish}\sv{Svenska}}{\en{Native}\sv{Modersmål}}\\
             \medskip
             
-            \cvlang{\en{Lang 2}\sv{Engelska}}{\en{Proficient / C2}\sv{Flytande}}
+            \cvlang{\en{English}\sv{Engelska}}{\en{Proficient / Fluent}\sv{Flytande}}
 		\medskip
             
-            \cvlang{\en{Lang 3}\sv{Kroatiska}}{\en{Proficient / C2}\sv{Grundläggande kunskaper}}
+            \cvlang{\en{Croatian}\sv{Kroatiska}}{\en{Basic knowledge}\sv{Grundläggande kunskaper}}
             %% Yeah I didn't spend too much time making all the
             %% spacing consistent... sorry. Use \smallskip, \medskip,
             %% \bigskip, \vpsace etc to make ajustments.
@@ -182,31 +201,21 @@
         % ----- LANGUAGES -----
         
         % ----- KÖRKORT -----
-        \cvsection{Körkort}
-         \cvevent{\en{Title}\sv{Körkort}}{}{Oktober 2019}{}
-            \en{
+        \sv{\cvsection{Körkort}}\en{\cvsection{Licenses}}
+         \cvevent{\en{Driver License}\sv{Körkort}}{}{\sv{Oktober 2019}\en{October 2019}}{}
+
                 \begin{itemize}
-                    \item GPA: 1,23
+                    \item B + AM 
                 \end{itemize}
-            }
-            \sv{
-                \begin{itemize}
-                    \item B + AM Körkort
-                \end{itemize}
-	    }
+
  	    \divider
             
-            \cvevent{\en{Title}\sv{Truckkort}}{| TLP10}{Februari 2022}{}
-            \en{
-                \begin{itemize}
-                    \item GPA: 1,23
-                \end{itemize}
-            }
-            \sv{
+         \cvevent{\en{Forklift License}\sv{Truckkort}}{| TLP10}{\sv{Februari 2022}\en{February 2022}}{}
+
                 \begin{itemize}
                     \item A1, A2, A3, A4, B1, B2, B3, B4
                 \end{itemize}
-	    }
+
         % ----- KÖRKORT -----
 
         % ----- REFERENCES -----
@@ -215,7 +224,10 @@
 			%\email{andrea.leupold@volvocarretail.se}
 			%\phone{08-580 00 633}
 		Referens kan lämnas på efterfrågan.
-		}
+	}
+	\en{
+		References can be sent on request.
+	}
             \smallskip
         % ----- REFERENCES -----
         
@@ -246,7 +258,9 @@
         \cvsection{\en{About Me}\sv{Om mig}}
             \begin{quote}
                 \en{
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    I'm a very happy, outgoing and generally knowledgeable person. I have a big interest in computers, programming and other tech, I'm also interested in hunting and like physical
+		challenges as well as being out in nature. At the moment I'm studying my fourth consecutive year at Chalmers Technological University, and currently on my first year of my masters
+		 in high performance computer systems.
                 }
                 \sv{
                     Jag är en väldigt glad, utåtgående och allmänt kunnig person. Jag har ett stort intresse i datorer, programmering och övrig teknik,
@@ -258,44 +272,45 @@
         
         % ----- EXPERIENCE -----
         \cvsection{\en{Experience}\sv{Erfarenhet}}
-            \cvevent{\en{Charge}\sv{Produktionschef}}{| \en{Company}\sv{McDonald's}}{September 2018 -- Augusti 2020}{\en{City, Country}\sv{Katrineholm, Sverige}}
+            \cvevent{\en{Production Manager}\sv{Produktionschef}}{| \en{McDonald's}\sv{McDonald's}}
+			{\sv{September 2018 -- Augusti 2020}\en{September 2018 -- August 2020}}{\en{Katrineholm, Sweden}\sv{Katrineholm, Sverige}}
             \en{
-                \begin{itemize}
-                    \item First item
-                    \item Second item
-                    \item Third item
-                \end{itemize}
+               	 At McDonald's I worked mainly in the kitchen and did all the tasks that came with the position, such as making sure there are thawed ingredients, all machines are clean and
+		 operational and cooking the food. I'm also educated in all the service areas and manned the register, picked orders and took care of the drive-through. I have a finished education
+		 as production manager which means I'm qualified to educate new personnel, as well as a started education as shift manager. \\
             }
             \sv{
-                	På McDonald’s så jobbade jag till störst del i köket och gjorde då allt som tillkom, så som att se till att det fanns upptinade ingredienser, att alla maskiner var rena och fungerande och tillaga maten. 
-			Jag är också utbildad inom alla serviceområden och stod ibland i kassan, plockade ihop beställningar och tog hand om drive-through’en. Jag har avklarad utbildning som produktionschef och 
-			för att utbilda andra nya medarbetare, och en påbörjad utbildning för att jobba som skiftledare. \\
+                	På McDonald’s så jobbade jag till störst del i köket och gjorde då allt som tillkom, så som att se till att det fanns upptinade ingredienser, att alla maskiner var rena och fungerande och
+		 tillaga maten. Jag är också utbildad inom alla serviceområden och stod ibland i kassan, plockade ihop beställningar och tog hand om drive-through’en. Jag har avklarad utbildning
+		 som produktionschef och för att utbilda andra nya medarbetare, och en påbörjad utbildning för att jobba som skiftledare. \\
             }
 		\divider
-		\cvevent{\en{Charge}\sv{Kundserviceagent}}{| \en{Company}\sv{Volvo Car Retail (Konsult - Manpower)}}{Maj 2022 -- September 2022}{\en{City, Country}\sv{Göteborg, Sverige}}
+		\cvevent{\en{Customer Service Agent}\sv{Kundserviceagent}}{| \en{Volvo Car Retail (Consultant - Manpower)}\sv{Volvo Car Retail (Konsult - Manpower)}}
+			{\sv{Maj 2022 -- September 2022}\en{May 2022 -- September 2022}}{\en{Gothenburg, Sweden}\sv{Göteborg, Sverige}}
              \en{
-                \begin{itemize}
-                    \item First item
-                    \item Second item
-                    \item Third item
-                \end{itemize}
+                	Here I was employed by Volvo Car Retail as a consultant from Manpower. I worked at the facility Volvo Car Sörred in the Torslanda area. In the facility we had both retail of new
+		and used cars as well as a workshop and car rental. My tasks a a customer service agent involved a very broad work area with a lot of problem solving and customer service. I 
+		manned the "reception" to the facility and was the first point of contact for anyone entering for any purpose. From there it was my responsibility to make sure the customer gets 
+		the help they need or sees the right person. A usual day could include things such as, ordering extra parts, making a workshop reservation, receiving and giving out rental cars as
+		well as arranging test drives of both new and used cars. \\
             }
             \sv{
-                	Här var jag anställd av Volvo Car Retail som konsult från Manpower. Jag jobbade på anläggningen Volvo Car Sörred i Torslanda området. I anläggningen hade vi både återförsäljning av nya och gamla bilar, samt en verkstad och biluthyrning. Min 
-			arbetsuppgift som kundserviceagent involverade ett väldigt brett arbetsområde med mycket problemlösning och kundbemötande. Jag stod i "receptionen" till anläggningen och är första personen man får kontakt med när man kommer in. Därifrån är det 
-			upp till mig att se till att kunden får 	den hjälp de behöver, eller kommer till rätt person. En vanlig dag kunde involvera saker så som, att beställa reservdelar, att boka verkstadstid åt en kund, att lämna ut/ta emot hyrbilar och arrangera provkörningar av 
-			både nya och begagnade bilar. \\
+                	Här var jag anställd av Volvo Car Retail som konsult från Manpower. Jag jobbade på anläggningen Volvo Car Sörred i Torslanda området. I anläggningen hade vi både
+		 återförsäljning av nya och gamla bilar, samt en verkstad och biluthyrning. Min arbetsuppgift som kundserviceagent involverade ett väldigt brett arbetsområde med mycket
+		 problemlösning och kundbemötande. Jag stod i "receptionen" till anläggningen och är första personen man får kontakt med när man kommer in. Därifrån är det upp till mig att 
+		se till att kunden får den hjälp de behöver, eller kommer till rätt person. En vanlig dag kunde involvera saker så som, att beställa reservdelar, att boka verkstadstid åt en kund,
+		 att lämna ut/ta emot hyrbilar och arrangera provkörningar av både nya och begagnade bilar. \\
             }
 
 	 \divider
 
-	\cvevent{\en{Charge}\sv{Göteborg Representant}}{| \en{Company}\sv{Wanda Sweden}}{Oktober 2022 --  }{\en{City, Country}\sv{Göteborg, Sverige}}
+		\cvevent{\en{Gothenburg Representative}\sv{Göteborg Representant}}{| \en{Wanda Sweden}\sv{Wanda Sweden}}
+			{\sv{Oktober 2022 --  }\en{October 2022 --  }}{\en{Gothenburg, Sweden}\sv{Göteborg, Sverige}}
             \en{
-                \begin{itemize}
-                    \item First item
-                    \item Second item
-                    \item Third item
-                \end{itemize}
+               	Wanda opened their first warehouse in Gothenburg in October of 2022 and I was the first on-site employee. I have since had the main responsibility for our operations here in 
+		Gothenburg as the rest the personnel - including my nearest boss - is based in Stockholm. My responsibilities aside from the regular work has been educating new employees as well
+	 	as making sure everything around the warehouse and our services works and keeping my closest boss updated. Since August of 2023 I have also had the responsibility of route
+		planning/capacity management for all of our warehouses in Sweden. \\
             }
             \sv{
                 	Wanda öppnade sitt första lager i Göteborg Oktober 2022 och jag belv den första annställda på plats. Jag har sedan dess haft mycket ansvar och varit huvudansvarig för vår
@@ -308,12 +323,13 @@
         
         % ----- EDUCATION -----
         \cvsection{\en{Education}\sv{Utbildning}}
-            \cvevent{\en{Title}\sv{Teknikprogrammet}}{| Gymnasieskola}{Augusti 2017 -- Juni 2020}{\en{City, Country}\sv{Eskilstuna, Sverige}}
+            	\cvevent{\en{Tech program}\sv{Teknikprogrammet}}{\sv{| Gymnasieskola}\en{| Upper secondary school}}
+			{\sv{Augusti 2017 -- Juni 2020}\en{August 2017 -- June 2020}}{\en{Eskilstuna, Sweden}\sv{Eskilstuna, Sverige}}
             \en{
-                Attended \link{University}{https://university.com}
+                Attended \link{Grillska Gymnasiet}{https://grillska.se/grillska-gymnasiet-eskilstuna}
                 \smallskip
                 \begin{itemize}
-                    \item GPA: 1,23
+                    \item Grade Average: 19.98
                 \end{itemize}
             }
             \sv{
@@ -323,17 +339,21 @@
                     \item Betygssnitt: 19.98
                 \end{itemize}
             }
+
             \divider
             
-            \cvevent{\en{Title}\sv{Data- och informationsteknik}}{| Universitet}{Augsti 2020 -- Juni 2025}{\en{City, Country}\sv{Göteborg, Sverige}}
+            	\cvevent{\en{Computer Science}\sv{Data- och informationsteknik}}{\sv{| Universitet}\en{| University}}
+			{\sv{Augsti 2020 -- Juni 2025}\en{August 2020 -- June 2025}}{\en{Gothenburg, Sweden}\sv{Göteborg, Sverige}}
             \en{
+ 	      Attending \link{Chalmers University of Technology}{https://www.chalmers.se/en/Pages/default.aspx}
+                \smallskip
                 \begin{itemize}
-                    \item GPA: 1,23
+                    \item GPA: N/A
                 \end{itemize}
             }
             \sv{
-		 Går på \link{Chalmers Tekniska Högskola}{https://www.chalmers.se/en/Pages/default.aspx}
-		\smallskip
+	      Går på \link{Chalmers Tekniska Högskola}{https://www.chalmers.se/en/Pages/default.aspx}
+	     \smallskip
                 \begin{itemize}
                     \item Betygssnitt: N/A
                 \end{itemize}
